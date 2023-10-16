@@ -1,3 +1,30 @@
+<?php
+
+use Classes\Dog;
+use Classes\Person;
+
+	$array = array('apple', 'orange');
+	$array2 = ['apple', 'orange'];
+	$assoc_array = array('name' => 'John', 'age' => 25);
+	$jon = 'Jon';
+
+	$isTrue = true;
+	$isFalse = false;
+
+	$ternary = $isTrue ? 'true' : 'false';
+	$shortTernary = $isTrue ?: 'false';
+	$nullish = $isFalse ?? 'false';
+
+
+	$my_person = new Person('John', 25);
+	$name = $my_person->name;
+	$dog = new Dog();
+
+	$my_person->myTraitMethod();
+	$dog->myTraitMethod();
+
+	$age = $my_person->age;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +33,23 @@
 	<title>Testing PHP</title>
 </head>
 <body>
-	<?php
-		echo "Hello World!";
-	?>
+	<h1>Page Title</h1>
+	<ul>
+		<?php foreach ($array as $item) { ?>
+			<li><?php echo $item; ?></li>
+		<?php } ?>
+	</ul>
+
+	<ul>
+		<?php foreach ($array2 as $item) { ?>
+			<li><?php echo $item; ?></li>
+		<?php } ?>
+	</ul>
+
+	<ul>
+		<?php foreach ($assoc_array as $k => $v) { ?>
+			<li><?php echo $k . ': ' . $v; ?></li>
+		<?php } ?>
+	</ul>
 </body>
 </html>
