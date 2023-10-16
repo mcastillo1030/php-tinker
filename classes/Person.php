@@ -20,7 +20,7 @@ class Person
 		}
 
 		public function __get($name) {
-			return $this->$name;
+			return $this->name;
 		}
 
 		public function myInterfaceMethod()

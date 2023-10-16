@@ -1,7 +1,18 @@
 <?php
+	foreach (glob('interfaces/*.php') as $filename) {
+		include $filename;
+	}
 
-use Classes\Dog;
-use Classes\Person;
+	foreach (glob('traits/*.php') as $filename) {
+		include $filename;
+	}
+
+	foreach (glob('classes/*.php') as $filename) {
+		include $filename;
+	}
+
+	use Classes\Dog;
+	use Classes\Person;
 
 	$array = array('apple', 'orange');
 	$array2 = ['apple', 'orange'];
@@ -20,8 +31,8 @@ use Classes\Person;
 	$name = $my_person->name;
 	$dog = new Dog();
 
-	$my_person->myTraitMethod();
-	$dog->myTraitMethod();
+	// $my_person->myTraitMethod();
+	// $dog->myTraitMethod();
 
 	$age = $my_person->age;
 ?>
